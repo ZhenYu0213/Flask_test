@@ -8,14 +8,14 @@ import flask
 myDB = mysql.connector.connect(
   host = "localhost",
   user = "root",
-  password = "changeisgood",
-  database = "webchatroom",
+  password = "jack040520",
+  database = "webdatabase",
 )
-cursor=myDB.cursor()
+cursor=myDB.cursor(dictionary=True)
 
 # methods
 def GetUserInfo():
   if(myDB.is_connected()):
-    cursor.execute("SELECT UserAccount,UserPassword FROM userinfo;")
+    cursor.execute("SELECT userAccount,userPassword FROM userinfo;")
     rows=cursor.fetchall()
     return rows
