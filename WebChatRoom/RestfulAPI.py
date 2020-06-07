@@ -50,7 +50,7 @@ def login():
             return jsonify(errCode='1',errMsg='success')
         else:
             flash('Login Unsuccessful. Please check username and password', 'danger')
-    return jsonify(errCode='87',errMsg='failed')
+    return render_template('sign.htm',form=form)
 
 
 @app.route("/adminLogin", methods=['GET', 'POST'])
@@ -65,7 +65,7 @@ def AdminLogin():
                 return redirect(url_for('home'))
             else:
                 flash('Login Unsuccessful. Please check username and password', 'danger')
-    return render_template('login.html', title='Login', form=form)
+    return render_template('adminLogin.html', title='Login', form=form)
 app.run()
 
 

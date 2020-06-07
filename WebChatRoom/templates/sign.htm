@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8">
+       <title>註冊網頁</title>
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="text-align:center">
+       <form method="post" >
+           <table>
+              <tr>
+                  <td>會員名稱:</td>
+                  <td><input type="text" name="userAccount" required></td>
+              </tr>
+              <tr>
+                  <td>密碼:</td>
+                  <td><input type="password" name="userPassword" required></td>
+              </tr>
+              <tr>
+                  <td>性別:</td>
+                  <td>
+                      <input type="radio" name="sex" value="男" required>男
+                      <input type="radio" name="sex" value="女">女<br>
+                  </td>
+              </tr>
+            </table>
+              <input type="submit" value="註冊">
+      </form>
+    </body>
+</html>
